@@ -1,74 +1,142 @@
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F4F4F4;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
 }
 
-header {
-    background-color: #bbbbbb;
-    padding: 1rem;
-    color: #fff;
-  }
-  
-  @media (max-width: 768px) {
-    header {
-      padding: 0.5rem;
-    }
-  }
+/* Navigation */
+nav {
+    background-color: #4A90E2;
+    padding: 15px 0;
+}
+
+nav h2 {
+    color: white;
+}
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
+
 nav ul li {
     display: inline;
-    margin-right: 20px;
-}
-section {
-    margin: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
+    margin: 0 15px;
 }
 
 nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
-#home {
-    background-color: #f0f0f0;
-    padding: 50px 20px;
+/* Hero Section */
+.hero {
+    background: url('path/to/your/background-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Ensures the text is white for visibility */
     text-align: center;
+    position: relative; /* Added position for potential overlay */
+    z-index: 1; /* Ensures it is above any other content */
 }
 
-#home h1 {
-    font-size: 2.5rem;
-    margin: 0;
+.hero-content {
+    z-index: 2; /* Ensure content is on top */
+    padding: 20px; /* Optional: add padding for better visibility */
 }
 
-#about, #projects, #contact {
-    padding: 40px 20px;
+/* Optional: Add a semi-transparent overlay for better text visibility */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+    z-index: 1; /* Places overlay behind the text */
 }
 
-.project-card {
-    background-color: #eaeaea;
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #50E3C2; /* Example button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.portfolio-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7); /* Optional: dark overlay for contrast */
+    color: white;
     padding: 20px;
-    margin-bottom: 20px;
+    border-radius: 10px; /* Optional: round edges */
 }
 
+.portfolio-item img {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    nav ul {
+    .about {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    #home h1 {
-        font-size: 2rem;
+    .portfolio-grid {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
 }
-
-
-  

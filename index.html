@@ -3,73 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+    <title>Prince Kumar | Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h2>Prince Kumar</h2>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Hello, I'm <span>Prince Kumar</span></h1>
+            <p>Front-End Developer & MERN Stack Learner</p>
+            <a href="#portfolio" class="cta-button">View My Work</a>
+        </div>
     </header>
 
-    <section id="home">
-        <h1>Hello, I'm Prince Kumar</h1>
-        <p>Frontend Developer</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I will add my Bio later.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Responsive Landing-Page</h3>
-            <p>In this Web page you can explore and just contact us for any query.</p>
-            <p>Leter on we will add some more features on this page like "Newsletter".</p>
-            <a href="https://prince7858.github.io/landing-page/" target="_blank">Live Demo</a> | <a href="https://github.com/prince7858" target="_blank">GitHub</a>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right">
+                <h2>About Me</h2>
+                <p>
+                    I’m Prince Kumar, a passionate web developer with skills in HTML, CSS, and JavaScript. I’m currently learning React and the MERN stack to enhance my full-stack development capabilities.
+                </p>
+                <p>I hold a Master's degree from Chandigarh University and a Bachelor's from Magadh University.</p>
+            </div>
+            <div class="about-image" data-aos="fade-left">
+                <img src="path/to/your/profile-image.jpg" alt="Prince Kumar">
+            </div>
         </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+    <h2>My Projects</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item" data-aos="zoom-in">
+            <img src="src\landing-page_(iPad Pro).jpg" alt="Landing Page Project" width="300" height="auto">
+            <div class="portfolio-overlay">
+                <h3>Landing Page Project</h3>
+                <p>A modern landing page designed to capture user interest.</p>
+                <a href="https://prince7858.github.io/landing-page/" target="_blank" class="cta-button">Live Demo</a>
+                <a href="https://github.com/prince7858/landing-page" target="_blank" class="cta-button">View Code</a>
+            </div>
+        </div>
+        <!-- Other portfolio items can go here -->
+    </div>
+</section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
         <ul>
-            <li>
-                <strong>Master of Computer Applications (MCA) in Computer Science</strong><br>
-                Chandigarh University, 2024<br>
-                - Relevant Courses: Data Structures, Web Development, Machine Learning
-            </li>
-            <li>
-                <strong>Web Development Bootcamp</strong><br>
-                AccioJobs, 2024<br>
-                - Skills Acquired: HTML, CSS, JavaScript, React
-            </li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>MERN Stack</li>
         </ul>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out via email or social media.</p>
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>"Prince is a talented web developer with a keen eye for design!"</p>
+            <cite>- A Former Classmate</cite>
+        </blockquote>
     </section>
 
-    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/mzzpnlkb" method="POST" data-aos="fade-up">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
 
-
-    
-
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Prince Kumar</p>
+        <p>&copy; 2024 Prince Kumar | <a href="#home">Back to top</a></p>
     </footer>
 
-
-    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
