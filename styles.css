@@ -1,142 +1,263 @@
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #F4F4F4;
-    color: #333;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-}
-
-/* Navigation */
-nav {
-    background-color: #4A90E2;
-    padding: 15px 0;
-}
-
-nav h2 {
-    color: white;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-    background: url('path/to/your/background-image.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header */
+  header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    color: white; /* Ensures the text is white for visibility */
+    padding: 20px 40px;
+    background: #333;
+    color: #fff;
+  }
+  
+  header img {
+    width: 50px;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header nav a:hover {
+    color: #ff6b6b;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
     text-align: center;
-    position: relative; /* Added position for potential overlay */
-    z-index: 1; /* Ensures it is above any other content */
-}
-
-.hero-content {
-    z-index: 2; /* Ensure content is on top */
-    padding: 20px; /* Optional: add padding for better visibility */
-}
-
-/* Optional: Add a semi-transparent overlay for better text visibility */
-.hero::before {
-    content: "";
+    padding: 80px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background: #e63946;
+  }
+  
+  /* Services Section */
+  .services {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: #fff;
+  }
+  
+  .service {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .service img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  /* About Section */
+  .about {
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+    background: #f3f3f3;
+  }
+  
+  .about-content {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .about-text {
+    max-width: 600px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  /* Portfolio */
+  .portfolio {
+    padding: 60px 20px;
+    background: #fff;
+  }
+  
+  .portfolio h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .portfolio-item {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    display: block;
+  }
+  
+  .portfolio-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .portfolio-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
-    z-index: 1; /* Places overlay behind the text */
-}
-
-
-/* About Section */
-.about {
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #50E3C2; /* Example button color */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.portfolio-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.7); /* Optional: dark overlay for contrast */
-    color: white;
-    padding: 20px;
-    border-radius: 10px; /* Optional: round edges */
-}
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+  }
 
-.portfolio-item img {
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto; /* Maintains the aspect ratio */
-    border-radius: 10px; /* Optional: for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
-}
-
-
-/* Contact Section */
-.contact {
-    padding: 50px 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
+  .testimonials {
     text-align: center;
-    padding: 20px 0;
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+}
+.testimonials-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 1rem;
+}
+.testimonial-item blockquote {
+    font-style: italic;
+    color: #555;
+}
+.testimonial-item cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
-/* Skills Section */
-.skills {
-    padding: 50px 20px;
+.contact {
+    padding: 2rem;
+    background-color: #f1f1f1;
+}
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social-links {
+    margin-top: 1rem;
+    text-align: center;
+}
+.social-links a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
 }
 
-/* Testimonials Section */
-.testimonials {
-    padding: 50px 20px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+  }
+  
+  footer a {
+    color: #ff6b6b;
+    text-decoration: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
     .about {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
     }
-
-    .portfolio-grid {
-        flex-direction: column;
+  
+    .services {
+      flex-direction: column;
+      gap: 20px;
     }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
+  }
+  

@@ -8,28 +8,47 @@
     <title>Prince Kumar | Portfolio</title>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <h2>Prince Kumar</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="hero" id="home">
+    <header>
+        <div>
+          <img src="/src/Logo.png" alt="Logo">
+        </div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact" class="highlight">Contact</a>
+        </nav>
+      </header>
+      <section class="hero" id="home">
         <div class="hero-content" data-aos="fade-up">
             <h1>Hello, I'm <span>Prince Kumar</span></h1>
             <p>Front-End Developer & MERN Stack Learner</p>
             <a href="#portfolio" class="cta-button">View My Work</a>
         </div>
+        <div>
+            <h2>Front-end Developer</h2>
+            <p>Hi. I'm Iam, a Front-end Developer with experience of creating successful websites.</p>
+        </div>
+      </section>
+      <section class="services">
+        <div class="service">
+          <img src="/src/frontend-icon.webp" alt="Front-end Development">
+          <h3>Front-end development</h3>
+          <p>Responsive websites built for an excellent user experience.</p>
+        </div>
+        <div class="service">
+          <img src="/src/tools-icon.webp" alt="Performance Testing">
+          <h3>Performance, SEO, & accessibility testing</h3>
+          <p>Make your website fast, easy to use, and accessible.</p>
+        </div>
+        <div class="service">
+          <img src="/src/react-icon.webp" alt="React Websites">
+          <h3>React websites</h3>
+          <p>Manage your website using the best CMS available.</p>
+        </div>
+      </section>
     </header>
 
     <!-- About Section -->
@@ -43,7 +62,7 @@
                 <p>I hold a Master's degree from Chandigarh University and a Bachelor's from Magadh University.</p>
             </div>
             <div class="about-image" data-aos="fade-left">
-                <img src="path/to/your/profile-image.jpg" alt="Prince Kumar">
+                <img src="/src/logo-placeholder2.jpg" alt="Prince Kumar">
             </div>
         </div>
     </section>
@@ -61,30 +80,50 @@
                 <a href="https://github.com/prince7858/landing-page" target="_blank" class="cta-button">View Code</a>
             </div>
         </div>
+        <div class="portfolio-item" data-aos="zoom-in">
+            <img src="src\landing-page_(iPad Pro).jpg" alt="Landing Page Project" width="300" height="auto">
+            <div class="portfolio-overlay">
+                <h3>Landing Page Project</h3>
+                <p>A modern landing page designed to capture user interest.</p>
+                <a href="https://prince7858.github.io/landing-page/" target="_blank" class="cta-button">Live Demo</a>
+                <a href="https://github.com/prince7858/landing-page" target="_blank" class="cta-button">View Code</a>
+            </div>
+        </div>
+        <div class="portfolio-item" data-aos="zoom-in">
+            <img src="src\landing-page_(iPad Pro).jpg" alt="Landing Page Project" width="300" height="auto">
+            <div class="portfolio-overlay">
+                <h3>Landing Page Project</h3>
+                <p>A modern landing page designed to capture user interest.</p>
+                <a href="https://prince7858.github.io/landing-page/" target="_blank" class="cta-button">Live Demo</a>
+                <a href="https://github.com/prince7858/landing-page" target="_blank" class="cta-button">View Code</a>
+            </div>
+        </div>
+        
         <!-- Other portfolio items can go here -->
     </div>
 </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <h2>My Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>MERN Stack</li>
-        </ul>
-    </section>
-
+ 
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <h2>Testimonials</h2>
-        <blockquote>
-            <p>"Prince is a talented web developer with a keen eye for design!"</p>
-            <cite>- A Former Classmate</cite>
-        </blockquote>
+        <div class="testimonials-grid">
+            <div class="testimonial-item">
+                <blockquote>
+                    <p>"Prince is a talented web developer with a keen eye for design!"</p>
+                    <cite>- A Former Classmate</cite>
+                </blockquote>
+            </div>
+            <div class="testimonial-item">
+                <blockquote>
+                    <p>"An amazing professional, delivering top-quality work on time."</p>
+                    <cite>- A Happy Client</cite>
+                </blockquote>
+            </div>
+            <!-- Add more testimonials here -->
+        </div>
     </section>
+    
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -92,23 +131,36 @@
         <form action="https://formspree.io/f/mzzpnlkb" method="POST" data-aos="fade-up">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
             </div>
             <button type="submit" class="cta-button">Send Message</button>
         </form>
+        <div class="social-links">
+            <a href="https://github.com/prince7858" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/prince-singh-2021" target="_blank">LinkedIn</a>
+            <!-- Add more social links -->
+        </div>
     </section>
+    
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Prince Kumar | <a href="#home">Back to top</a></p>
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#portfolio">Portfolio</a> |
+            <a href="#testimonials">Testimonials</a> |
+            <a href="#contact">Contact</a>
+        </nav>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
